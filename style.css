@@ -1,0 +1,13 @@
+.full-img {
+    position: relative;
+    display: block;
+    width: 640px;
+    height: 480px;
+  }
+
+.draggable { 
+    width: 150px; 
+    height: 150px; 
+    padding: 0.5em;
+  
+  }
