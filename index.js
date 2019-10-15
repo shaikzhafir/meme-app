@@ -2,10 +2,12 @@
 
 var displayedImage = document.querySelector('.image-fluid');
 var searchBar = document.querySelector('input');
-var searchBtn = document.querySelector('button');
+var searchBtn = document.querySelector('#searchBtn');
 var main = document.querySelector('main');
 var section = document.createElement('section');
 var draggable = document.querySelector('.container');
+var addText = document.querySelector('#addText');
+
 main.appendChild(section);
 
 const MEME_API = "https://api.imgflip.com/get_memes";
@@ -37,10 +39,6 @@ async function getMeme(){
         var imgSrc = memes[getRand()].url ;
         displayedImage.setAttribute('src', imgSrc);
     }) */
-
-    displayedImage.onclick = (e => {
-        draggable.appendChild()
-    })
 
 
 
@@ -99,3 +97,11 @@ function getRand(){
 
 }
 
+function createTextArea(){
+    
+        var txtAreaHTML = "<div contentEditable='true' class='meme-txt-area'></div>";
+        $("#selected-meme").append(txtAreaHTML);
+        $(".meme-txt-area").draggable();
+        $(".meme-txt-area").focus();
+    
+}
