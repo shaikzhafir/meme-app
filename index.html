@@ -11,27 +11,49 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container-fluid">
-
-    <h1 class="center"><a  href="index.html">meme generator</a> </h1>
-    <input type="text" id="searchBar" placeholder="a meme, for e.g ur mum">
-        <button id="searchBtn">search</button>
-            <div id="meme-canvas-container">
-                <canvas id="meme-preview"></canvas>
-                <button id="save-file-btn">click here to save</button>
-            </div>
-        <br><button id="addText" onClick="createTextArea()"> add text </button>
-        <button id="deleteText" onClick="deleteText()"> delete text</button>
-            <div id="selected-meme">
-                    <img class="image-fluid" src="https://aws1.discourse-cdn.com/waypoint/original/2X/6/677d5f5b57c1a42c1080982b037483dce38aeb9b.png" alt="ur mum" >
-            </div>
-            <button id="save-as-image">click here to preview!</button>
-           <p>here are search results</p>
-           <main>
-
-           </main>
-
-    <script src="index.js"></script>
+    <div class="top-header">
+    <h1 class="center"><a  href="index.html">The bobross96 meme generator</a> </h1>
+    <!-- <input type="text" id="searchBar" placeholder="a meme, for e.g ur mum"> -->
+        <canvas style="text-align:center" id="meme-preview"></canvas>
     </div>
+    
+    <div class="container">
+
+    
+        <div class="leftCol">
+            
+            <div id="meme-canvas-container">
+                
+                
+                
+            </div>
+            <div id="selected-meme">
+                <input class="boxNum" type="hidden" value="">
+                <img class="current-meme" src="https://aws1.discourse-cdn.com/waypoint/original/2X/6/677d5f5b57c1a42c1080982b037483dce38aeb9b.png" alt="ur mum" >
+            </div>
+        </div>
+        <div class="rightCol">
+            <!-- <button id="save-as-image">click here to preview!</button> -->
+            <label for="topText">Top text:</label><br>
+            <input type="text" id="topText" name="topText"><br>
+            <label for="botText" >Bot Text:</label><br>
+            <input type="text" id="botText" name="botText"><br><br>
+            <button id="addText" onClick="createTextArea()"> add text </button>&nbsp;
+            <button id="deleteText" onClick="deleteText()"> delete text</button><br><br>
+            <button  onClick="captionMeme()">Generate</button><br><br>
+            <button id="save-as-image">Preview Meme</button>
+        </div>
+
+    </div>
+    <div style="text-align: center; margin-bottom: 50px;">
+        <button id="searchBtn">Generate memes</button><br>
+    </div>
+    
+           
+        <div class="fetched-memes">
+
+        </div>
+    <script src="index.js"></script>
+    
 </body>
 </html>
