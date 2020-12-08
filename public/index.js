@@ -9,6 +9,10 @@ var rightCol = document.querySelector(".rightCol");
 
 
 const MEME_API = "https://api.imgflip.com/get_memes";
+// it is easy to make your own account, since this is client side only i didnt bother hiding
+const username = "bobross96"
+const password = "Mememachine1996"
+
 
 getMeme();
 
@@ -81,8 +85,8 @@ async function captionMeme() {
   let memeID = currentMeme[0].id;
   //this should be done server side but fuck it
   formData.append("template_id", memeID);
-  formData.append("username", "bobross96");
-  formData.append("password", "Mememachine1996");
+  formData.append("username", username);
+  formData.append("password", password);
   //add space if empty to avoid error of no entry
   let textboxes = document.querySelectorAll('.textbox')
   textboxes.forEach((textbox,index) => {
@@ -107,13 +111,7 @@ async function captionMeme() {
     });
 }
 
-const data = {
-  template_id: "438680",
-  username: "bobross96",
-  password: "Mememachine1996",
-  text0: "lala",
-  text1: "poop",
-};
+
 
 function setRandomMeme(memeArray) {
   let randomMemeLocation = Math.floor(Math.random() * memeArray.length);

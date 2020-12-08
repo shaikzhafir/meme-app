@@ -52,11 +52,6 @@
 
 
 
-  .current-meme {
-    max-width: 380px;
-    max-height: 500px;
-  }
-
   #meme-preview {
     max-width: 900px;
     max-height: 500px;
@@ -95,9 +90,4 @@
 
   body {
     
-  }
-
-  .img-fluid {
-    width: 200px;
-    height: 250px;
   }
