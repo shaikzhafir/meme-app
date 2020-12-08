@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>poop</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    
+    
+    <div class="container justify-content-center">
+        <div class="row justify-content-center">
+            <div class="col top-header">
+                <h1><a  href="index.html">The bobross96 meme generator</a></h1>
+            </div>
+        </div>
+        <div id="selected-meme" class="row justify-content-center">
+            <div class="col top-header">
+                    <input class="boxNum" type="hidden" value="">
+                    <img class="current-meme" src="https://aws1.discourse-cdn.com/waypoint/original/2X/6/677d5f5b57c1a42c1080982b037483dce38aeb9b.png" alt="ur mum" >
+            </div>
+        </div>
+        <div class="row">
+            <div id="textboxes" class="col top-header textboxes">
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; margin-bottom: 60px;">
+        <button  class="btn btn-primary" onClick="captionMeme()">Generate</button><br>
+    </div>
+    <div style="text-align: center; margin-bottom: 50px;">
+        <button class="btn btn-info" id="searchBtn">Retrieve memes</button><br>
+    </div>
+    
+           
+        <div class="fetched-memes">
+
+        </div>
+    <script src="index.js"></script>
+    
+</body>
+</html>
